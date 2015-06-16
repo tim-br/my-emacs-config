@@ -1,3 +1,22 @@
+;;java -cp cljs.jar:src clojure.main node.clj
+;;(defun cljs-node-repl ()
+;;  (interactive)
+;;  (run-clojure "java -cp cljs.jar:src clojure.main repl.clj"))
+
+(defun cljs-node-repl ()
+  (interactive)
+  (run-clojure "java -cp cljs.jar clojure.main node_repl.clj"))
+
+(defun lein-node-repl ()
+  (interactive)
+  (run-clojure "lein trampoline run -m clojure.main node_repl.clj"))
+
+(defun cljs-repl ()
+  (interactive)
+  (run-clojure "java -cp cljs.jar:src clojure.main repl.clj"))
+
+
+
 (defun toggle-window-split ()
   (interactive)
   (if (= (count-windows) 2)
